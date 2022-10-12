@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Salesforce">
+
+	<parameter name="url" value="https://login.salesforce.com/"></parameter>
+	<parameter name="username"
+		value="kirruba.lakshmi@testleaf.com"></parameter>
+	<parameter name="password" value="Abusakshi$263"></parameter>
+
+	<test thread-count="5" name="Content" verbose="2">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name='marathon2.SalesForceContent'></class>
+		</classes>
+	</test> <!-- Content -->
+
+	<test thread-count="5" name="Individuals" verbose="2">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name='marathon2.SalesForceIndividuals'></class>
+		</classes>
+
+	</test> <!-- Individuals -->
+</suite> <!-- Salesforce -->
